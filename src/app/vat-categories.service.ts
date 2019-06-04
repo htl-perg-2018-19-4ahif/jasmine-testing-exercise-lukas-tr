@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 export enum VatCategory {
   Food,
@@ -6,14 +6,13 @@ export enum VatCategory {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class VatCategoriesService {
-
-  constructor() { }
+  constructor() {}
 
   public getVat(category: VatCategory): number {
     // REPLACE the next line with the necessary code
-    return NaN;
+    return (category === 0 && 20) || (category === 1 && 10) || NaN;
   }
 }
